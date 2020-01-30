@@ -14,3 +14,20 @@ roomArray[604] = ("to the north the snoring increases, to the east you hear a fl
 roomArray[603] = ("you have now reached the bedrooms... there is many clues here to help you escape /nTo the south is the hallway and to the west, east, and north are walls")
 
 #hallway
+
+
+
+
+
+
+
+def doesRoomExist(roomNumber):
+    try:
+        if roomArray(roomNumber) == False:
+        print("you can not go there!")
+            return False
+        else:
+            return True
+    except:
+        print("you can not go there")
+        return False

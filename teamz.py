@@ -44,3 +44,15 @@ def doesRoomExist(roomNumber):
     elif userInput == "w" and doesRoomExist(location) == True:
         location = location - 100
         return location
+   
+   
+   def main():
+    location = 404
+    print("shuttle escape /nBy Matthew, Zach, Haydon")
+    sleep(1)
+    while True:
+        print(roomArray[])
+        print("please type: n, s, e, w or quit ")
+        userInput = input(userInput)
+        location = move(userInput, location)
+        break 

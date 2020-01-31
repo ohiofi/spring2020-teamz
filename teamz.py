@@ -31,3 +31,16 @@ def doesRoomExist(roomNumber):
     except:
         print("you can not go there")
         return False
+
+   
+   
+ def move(userInput, location):
+    if userInput == "n" and doesRoomExist(location) == True:
+        location = location - 1
+    elif userInput == "s" and doesRoomExist(location)== True:
+        location = location + 1
+    elif userInput == "e" and doesRoomExist(location) == True:
+        location = location + 100
+    elif userInput == "w" and doesRoomExist(location) == True:
+        location = location - 100
+        return location

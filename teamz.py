@@ -48,7 +48,7 @@ def doesRoomExist(roomNumber):
    
    def main():
     location = 404
-    print("shuttle escape /nBy Matthew, Zach, Haydon")
+    print("shuttle escape \nBy Matthew, Zach, Haydon")
     sleep(1)
     while True:
         print(roomArray[])

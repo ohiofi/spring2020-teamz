@@ -14,6 +14,10 @@ roomArray[604] = ("to the north the snoring increases, to the east you hear a fl
 roomArray[603] = ("you have now reached the bedrooms... there is many clues here to help you escape /nTo the south is the hallway and to the west, east, and north are walls")
 
 #hallway
+roomArray[704] = "you smell something awful further down the hallway to the east, to the west you hear a quiet spraying sound."
+roomArray[804] = "on the floor you see a towel with something brown on it, theres a door with a man and a women drawing on it to the south and walls to the east and north."
+roomArray[805] = "you see a flouding toilet the awful smell is coming from the toilet and there are brown moist mushy bits of feces you notice something in the toilet. to the east is a air sealed door."
+roomArray[905] = "theres a door east it seems to be locked but you can see outside to outerspace."
 
 
 

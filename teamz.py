@@ -56,6 +56,24 @@ def doesRoomExist(roomNumber):
     sleep(1)
     while True:
         print(roomArray[])
+      if location == roomArray[304]:
+        print("Item: Windex bottle")
+
+    if location == roomArray[403]:
+        print("Item: Spoon")
+
+    if location == roomArray[405]:
+        print("Item: Space suit")
+
+    if location == roomArray[603]:
+        print("Item: Key")
+
+    if location == roomArray[505]:
+        print("Item: Oxygen tank")
+
+    if location == roomArray[805]:
+        print("Item: Parachute")
+    return location
         print("please type: n, s, e, w or quit ")
         userInput = input(userInput)
         location = move(userInput, location)

@@ -156,3 +156,14 @@ def main():
             print("Thank you")
             break
         location = move(userInput, location)
+
+#OverWatch MiniGame
+def OWminigame(questionText):
+    while True:
+        answer = input()
+        answer = int(answer)
+        if answer == 2016:
+            print("congrats! a mysterious password of sorts shows on the screen Password: ooga booga")
+            break
+        else:
+            print("try again")

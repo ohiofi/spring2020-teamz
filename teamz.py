@@ -120,6 +120,11 @@ def main():
             userInput = input("Please type: n, s, e, w, quit, or take: ")
         else:
             userInput = input("Please type: n, s, e, w or quit: ")
+        # someone accidentally removed these next 4 lines when they added their guessing game
+        if userInput == "quit":
+            print("Thank you")
+            break
+        location = move(userInput, location)
             
 #guessing game
 
@@ -135,7 +140,7 @@ def randomSecretWord():
 
 
 
-def main():
+def guessing_game_main():
     word = randomSecretWord()
     word = word.lower()
     print("I'm thinking of a secret word. Take a guess between fruits, colors, and state names and you may be able to unlock the doors... ")
@@ -152,10 +157,7 @@ def main():
             break
 
 
-        if userInput == "quit":
-            print("Thank you")
-            break
-        location = move(userInput, location)
+        
 
 #OverWatch MiniGame
 def OWminigame(questionText):

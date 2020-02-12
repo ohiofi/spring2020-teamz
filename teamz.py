@@ -110,6 +110,38 @@ def main():
             userInput = input("Please type: n, s, e, w, quit, or take: ")
         else:
             userInput = input("Please type: n, s, e, w or quit: ")
+            
+#guessing game
+
+def randomSecretWord():
+    mylist1 = ["apple", "banana", "pear", "dragon fuit", "strawberry", "orange", "kiwi", "cucumber", "mango", "watermelon"]
+    mylist2 = ["red", "yellow", "green",  "blue", "orange", "purple", "indigo", "maroon", "black", "white", "brown"]
+    mylist3 = ["ohio", "texas", "kentucky", "california", "arkansas", "oklahoma", "iowa", "idaho", "alabama", "alaska"]
+    combinedList = mylist1 + mylist2 + mylist3
+    word = choice(combinedList)
+    return word
+
+
+
+
+
+def main():
+    word = randomSecretWord()
+    word = word.lower()
+    print("I'm thinking of a secret word. Take a guess between fruits, colors, and state names and you may be able to unlock the doors... ")
+    while True:
+        print("guess a word")
+        userInput = input()
+        userInput = userInput.lower()
+        if userInput < word:
+            print("The secret word is after " + userInput)
+        if userInput > word:
+            print("the secret word is before " + userInput)
+        if userInput == word:
+            print("you got it!")
+            break
+
+
         if userInput == "quit":
             print("Thank you")
             break

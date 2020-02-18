@@ -15,6 +15,14 @@ itemArray[405] = "Space Suit"
 itemArray[603] = "Key"
 itemArray[505] = "Oxygen tank"
 itemArray[805] = "Parachute"
+itemArray[606] = "Router"
+itemArray[607] = "Chickie Nuggies"
+itemArray[507] = "A computer with Overwatch on it"
+itemArray[707] = "Pizza"
+itemArray[408] = "Gfuel"
+itemArray[608] = "Yoda"
+hasKey = False
+inventory = []
 
 #kitchen
 roomArray[304] = "You look out the window and see the beautiful planet Earth. The window seems like it was recently cleaned..."
@@ -23,7 +31,6 @@ roomArray[404] = "To your west is a window freshly cleaned. East is a long hall.
 roomArray[405] = "You walk into the dining room. It seems a fellow astronaut left something of theirs."
 roomArray[408] = "you see a man snorting something but he quickly hides it behind his back to you south, east, and west are walls."
 roomArray[407] = "you here the snorting sound grow louder from the south to your north and west are walls."
-
 
 #bedrooms
 roomArray[507] = "you see a running computer with a game window open to your west you faintly hear snorting to your north and south are walls."
@@ -34,7 +41,7 @@ roomArray[603] = "You have now reached the bedrooms... there is many clues here 
 roomArray[605] = "Here is the hallway that leads to the secod part of the station... \nto your east is the workout room and to your south you see the server room..."
 roomArray[606] = "You have reached the router room. To south you smell the sweet smell of deep fried, bagged chicken nuggets"
 roomArray[607] = "you have reached the secondary kitchen, to your south you see a mysterious locked room..."
-roomArray[608] = "this was a very secret room... you have reached YODA!!! congrats on nothing"
+
 #hallway
 roomArray[704] = "You smell something awful further down the hallway to the east, to the west you hear a quiet spraying sound."
 roomArray[707] = "you have reached the room of pizza... to your west you smell a great smell"
@@ -118,14 +125,21 @@ def main():
         if itemArray[location] != False:
             print("Item here: " + str(itemArray[location]))
             userInput = input("Please type: n, s, e, w, quit, or take: ")
+            if userInput == "take":
+                inventory.append(itemArray[location])
+                itemArray[location] = False
+                print(inventory)
+                for each in inventory:
+                    if each == "Key":
+                        hasKey = True
+                        roomArray[608] = "this was a very secret room... you have reached YODA!!! congrats on nothing"
         else:
             userInput = input("Please type: n, s, e, w or quit: ")
-        # someone accidentally removed these next 4 lines when they added their guessing game
         if userInput == "quit":
             print("Thank you")
             break
         location = move(userInput, location)
-            
+
 #guessing game
 
 def randomSecretWord():
@@ -136,11 +150,7 @@ def randomSecretWord():
     word = choice(combinedList)
     return word
 
-
-
-
-
-def guessing_game_main():
+def guessingGame():
     word = randomSecretWord()
     word = word.lower()
     print("I'm thinking of a secret word. Take a guess between fruits, colors, and state names and you may be able to unlock the doors... ")
@@ -156,11 +166,8 @@ def guessing_game_main():
             print("you got it!")
             break
 
-
-        
-
 #OverWatch MiniGame
-def OWminigame(questionText):
+def owMiniGame(questionText):
     while True:
         answer = input()
         answer = int(answer)
